@@ -8,10 +8,11 @@
 import SwiftUI
 
 enum SupportedColor: Int, CaseIterable {
-  case blue, purple, pink, red, orange, yellow, green
+  case auto, blue, purple, pink, red, orange, yellow, green
 
-  var color: Color {
+  var color: Color? {
     switch self {
+    case .auto:   return nil
     case .blue:   return .blue
     case .purple: return .purple
     case .pink:   return .pink
@@ -24,6 +25,7 @@ enum SupportedColor: Int, CaseIterable {
 
   var name: String {
     switch self {
+    case .auto:   return "Automatic"
     case .blue:   return "Blue"
     case .purple: return "Purple"
     case .pink:   return "Pink"

@@ -14,7 +14,7 @@ struct settingssceneApp: App {
     Window("Settings", id: "main") {
       SettingsView()
     }
-    .windowStyle(.hiddenTitleBar)
+//    .windowStyle(.hiddenTitleBar)
     #else
     WindowGroup {
       SettingsView()

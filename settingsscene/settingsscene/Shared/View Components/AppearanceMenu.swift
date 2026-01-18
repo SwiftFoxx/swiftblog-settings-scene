@@ -15,7 +15,9 @@ struct AppearanceMenu: View {
     Menu {
       ForEach(Appearance.allCases, id: \.rawValue) { appearance in
         Button {
-          selectedAppearance = appearance
+          withAnimation {
+            selectedAppearance = appearance
+          }
         } label: {
           Label(appearance.title, systemImage: appearance.systemImage)
         }
