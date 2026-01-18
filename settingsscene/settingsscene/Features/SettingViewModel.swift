@@ -5,12 +5,12 @@
 //  Created by Koushik Mudi on 1/17/26.
 //
 
-import Foundation
+import SwiftUI
 
 @Observable @MainActor
 final class SettingViewModel {
   var selectedAppearance = Appearance.auto
-  var selectedColor = SupportedColor.blue
+  var selectedColor = SupportedColor.auto
   var enableNotification = true
   var notificationCount = 10
   var receiveEmail = false
